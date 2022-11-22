@@ -34,7 +34,7 @@ class App extends React.Component {
     }
     // console.log(dataTask)
     // Record of a new task
-    axios.post('http://localhost:5000/task', dataTask)
+    axios.post('https://ywaac-api-assignments.onrender.com/task', dataTask)
   }
 
 
@@ -42,7 +42,7 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log("Loading to-do list...")
-    axios.get('http://127.0.0.1:5000/task')
+    axios.get('https://ywaac-api-assignments.onrender.com/task')
       .then(res => {
         console.log(res.data.content);
         this.setState({
